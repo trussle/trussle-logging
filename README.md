@@ -53,6 +53,6 @@ If you are to add your own custom transport then you it has to conform to this i
   info(message),
   warn(message),
   error(message),
-  trace(message)
+  critical(message)
 }
 ```
