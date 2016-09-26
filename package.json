@@ -1,6 +1,6 @@
 {
   "name": "trussle-logging",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "A simple logging library by Trussle, that one day will more than likely become an overcomplicated beast",
   "main": "index.js",
   "scripts": {
