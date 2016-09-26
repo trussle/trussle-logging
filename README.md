@@ -5,12 +5,15 @@
 A simple library for all things logging.
 
 ---
-##Simplesest Usage
+##Simplest Usage
 
 ```js
 var log = require("trussle-logger")("MyComponent");
 ```
-*If you are going for the simplest usage you will need to set the **NODE_LOG_LEVEL** Environment Variable
+
+If you are going for the simplest usage you will need to set the **NODE_LOG_LEVEL** Environment Variable
+
+
 ---
 
 ```bash
