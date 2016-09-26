@@ -1,10 +1,15 @@
 {
   "name": "trussle-logging",
-  "version": "1.0.0",
-  "description": "Very simple logging for Trussle",
+  "version": "1.0.1",
+  "description": "A simple logging library by Trussle, that one day will more than likely become an overcomplicated beast",
   "main": "index.js",
   "scripts": {
     "test": "mocha 'lib/**/*.spec.js' && eslint ."
+  },
+  "repository" :
+  {
+    "type" : "git",
+    "url" : "git@github.com:trussle/trussle-logging.git"
   },
   "author": "Trussle",
   "license": "ISC",
