@@ -10,6 +10,7 @@
     "type": "git",
     "url": "git@github.com:trussle/trussle-logging.git"
   },
+  "main": "lib/index.js",
   "author": "Trussle",
   "license": "ISC",
   "devDependencies": {
