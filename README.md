@@ -8,7 +8,7 @@ A simple library for all things logging.
 ##Simplest Usage
 
 ```js
-var log = require("trussle-logger")("MyComponent");
+var log = require("trussle-logging")("MyComponent");
 ```
 
 If you are going for the simplest usage you will need to set the **NODE_LOG_LEVEL** Environment Variable
