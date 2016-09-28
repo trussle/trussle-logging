@@ -29,7 +29,8 @@ If you are going for some advanced usage you there are 3 options
 {
   source: "ComponentName", // Name for component useful for navigating to your js file
   transport: new TransportClass(), // Logging transport can also be an array, default is console transport
-  level: "INFO", //See log sevels
+  level: "INFO", //See log sevels, if not set the the NODE_LOG_LEVEL environment will be used.
+  formatter: (logData) => `${logData.message}` //See Formatters
 }
 ```
 
@@ -43,8 +44,8 @@ If you are going for some advanced usage you there are 3 options
 
 ###Transports
 
-The default transport logs to console.
-If you are to add your own custom transport then you it has to conform to this interface
+The default Transport logs to the console.
+If you want to write to own trasport then it will have to comply with the following interface.
 
 ```js
 {
@@ -55,4 +56,28 @@ If you are to add your own custom transport then you it has to conform to this i
   error(message),
   critical(message)
 }
+```
+
+###Formatters
+
+Formatters are functions that take a logData object and return the output to be sent to the transport.
+
+The logData Object has these properies
+
+```js
+{
+  timestamp, // A moment object of the current utc time
+  source, // The source component of the log
+  level, //The log level
+  message // The original log message
+}
+```
+
+For more info on moment objects check out [momentjs](http://momentjs.com/)
+
+If no formatter is chosen then the default will be chosen.
+```js
+
+(logData) => `(${logData.source}) [${logData.level}] ${logData.message}`;
+
 ```

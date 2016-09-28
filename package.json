@@ -19,5 +19,8 @@
     "should": "^11.1.0",
     "should-sinon": "0.0.5",
     "sinon": "^1.17.6"
+  },
+  "dependencies": {
+    "moment": "^2.15.1"
   }
 }
