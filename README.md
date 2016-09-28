@@ -23,7 +23,7 @@ export NODE_LOG_LEVEL=DEBUG
 ---
 ##Advanced Usage
 
-If you are going for some advanced usage you there are 3 options
+If you are going for some advanced usage you there are several options
 
 ```js
 {
