@@ -84,7 +84,7 @@ If no formatter is chosen then the default will be chosen.
 
 ###Multiple Logs
 
-If your usecase requires you to have multiple logs seperate log files for INFO and ERROR logs for instance (*only the ConsoleTransprt at this time so if you need to log to a file you'll need to roll your own transport or feel free to contribute*) then you can add a variants property to your config, this will create a wrapper logger that will delegate to multiple loggers.
+If your usecase requires you to have multiple logs seperate log files for INFO and ERROR logs for instance (*only the ConsoleTransport at this time so if you need to log to a file you'll need to roll your own transport class*) then you can add a variants property to your config, this will create a wrapper logger that will delegate to multiple loggers.
 
 ```js
 {
