@@ -41,6 +41,7 @@ If you are going for some advanced usage you there are several options
 * WARN
 * ERROR
 * CRITICAL
+* NONE
 
 ###Transports
 
