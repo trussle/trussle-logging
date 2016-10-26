@@ -4,7 +4,8 @@
   "description": "A simple logging library by Trussle, that one day will more than likely become an overcomplicated beast",
   "main": "lib/index.js",
   "scripts": {
-    "test": "mocha 'lib/**/*.spec.js' && eslint ."
+    "test": "mocha 'lib/**/*.spec.js' && eslint .",
+    "debug": "mocha 'lib/**/*.spec.js' --debug-brk"
   },
   "repository": {
     "type": "git",
