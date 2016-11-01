@@ -5,7 +5,9 @@
   "main": "lib/index.js",
   "scripts": {
     "test": "mocha 'lib/**/*.spec.js' && eslint .",
-    "debug": "mocha 'lib/**/*.spec.js' --debug-brk"
+    "debug": "mocha 'lib/**/*.spec.js' --debug-brk",
+    "prepublish": "ln -sf ../../hooks/pre-commit .git/hooks/pre-commit",
+    "pre-commit": "npm test"
   },
   "repository": {
     "type": "git",
