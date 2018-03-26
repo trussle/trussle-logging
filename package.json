@@ -16,12 +16,12 @@
   "author": "Trussle",
   "license": "ISC",
   "devDependencies": {
-    "eslint": "^3.3.1",
-    "eslint-config-trussle": "^2.0.0",
-    "mocha": "^3.1.2",
-    "should": "^11.1.0",
+    "eslint": "3.19.0",
+    "eslint-config-trussle": "2.0.0",
+    "mocha": "3.5.3",
+    "should": "11.2.1",
     "should-sinon": "0.0.5",
-    "sinon": "^1.17.6"
+    "sinon": "1.17.7"
   },
   "dependencies": {
     "lodash": "^4.16.6",
