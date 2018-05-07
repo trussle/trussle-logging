@@ -21,7 +21,7 @@
     "mocha": "5.1.1",
     "should": "13.2.1",
     "should-sinon": "0.0.6",
-    "sinon": "4.5.0"
+    "sinon": "5.0.7"
   },
   "dependencies": {
     "lodash": "^4.16.6",
