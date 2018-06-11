@@ -5,7 +5,7 @@
 A simple library for all things logging.
 
 ---
-##Simplest Usage
+## Simplest Usage
 
 ```js
 var log = require("trussle-logging")("MyComponent");
@@ -21,7 +21,7 @@ export NODE_LOG_LEVEL=DEBUG
 ```
 
 ---
-##Advanced Usage
+## Advanced Usage
 
 If you are going for some advanced usage you there are several options
 
@@ -34,7 +34,7 @@ If you are going for some advanced usage you there are several options
 }
 ```
 
-###Log Levels
+### Log Levels
 * TRACE
 * DEBUG
 * INFO
@@ -43,7 +43,7 @@ If you are going for some advanced usage you there are several options
 * CRITICAL
 * NONE
 
-###Transports
+### Transports
 
 The default Transport logs to the console.
 If you want to write to own trasport then it will have to comply with the following interface.
@@ -59,7 +59,7 @@ If you want to write to own trasport then it will have to comply with the follow
 }
 ```
 
-###Templates
+### Templates
 
 Templates are functions that take a logData object and return the output to be sent to the transport.
 
@@ -83,7 +83,7 @@ If no formatter is chosen then the default will be chosen.
 
 ```
 
-###Multiple Logs
+### Multiple Logs
 
 If your usecase requires you to have multiple logs seperate log files for INFO and ERROR logs for instance (*only the ConsoleTransport at this time so if you need to log to a file you'll need to roll your own transport class*) then you can add a variants property to your config, this will create a wrapper logger that will delegate to multiple loggers.
 
