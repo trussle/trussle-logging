@@ -1,40 +1,42 @@
 # trussle-logging
 
----
+*Maintained by [@jonnyarnold](https://github.com/jonnyarnold/)*
 
 A simple library for all things logging.
 
----
-## Simplest Usage
+
+## Usage
 
 ```js
-var log = require("trussle-logging")("MyComponent");
+import buildLogger from "trussle-logging";
+const logger = buildLogger("MyComponent");
+
+logger.info("Testing, testing, 123!");
 ```
 
-If you are going for the simplest usage you will need to set the **NODE_LOG_LEVEL** Environment Variable
-
-
----
+You will need to set the **NODE_LOG_LEVEL** environment variable to choose the verbosity of the logger.
 
 ```bash
 export NODE_LOG_LEVEL=DEBUG
 ```
 
----
 ## Advanced Usage
 
-If you are going for some advanced usage you there are several options
+There are several advanced usage options:
 
 ```js
-{
-  source: "ComponentName", // Name for component useful for navigating to your js file
-  transport: new TransportClass(), // Logging transport can also be an array, default is console transport
-  level: "INFO", //See log sevels, if not set the the NODE_LOG_LEVEL environment will be used.
-  formatter: (logData) => `${logData.message}` //See Formatters
+import buildLogger from "trussle-logging";
+const logger = buildLogger({
+  source: "ComponentName", // Name for component; useful for navigating to your js file
+  transport: new TransportClass(), // Logging transport. Can also be an array: default is console transport
+  level: "INFO", // See Log Levels; if not set the the NODE_LOG_LEVEL environment will be used.
+  formatter: (logData) => `${logData.message}`, // See Formatters
+  variants: [] // See Variants
 }
 ```
 
 ### Log Levels
+
 * TRACE
 * DEBUG
 * INFO
@@ -45,8 +47,7 @@ If you are going for some advanced usage you there are several options
 
 ### Transports
 
-The default Transport logs to the console.
-If you want to write to own trasport then it will have to comply with the following interface.
+The default Transport logs to the console. If you want to write to your own transport then it will have to comply with the following interface:
 
 ```js
 {
@@ -63,7 +64,7 @@ If you want to write to own trasport then it will have to comply with the follow
 
 Templates are functions that take a logData object and return the output to be sent to the transport.
 
-The logData Object has these properies
+The logData object has these properies
 
 ```js
 {
@@ -74,18 +75,18 @@ The logData Object has these properies
 }
 ```
 
-For more info on moment objects check out [momentjs](http://momentjs.com/)
+For more info on moment objects check out [momentjs](http://momentjs.com/).
 
 If no formatter is chosen then the default will be chosen.
 ```js
-
 (logData) => `(${logData.source}) [${logData.level}] ${logData.message}`;
-
 ```
 
 ### Multiple Logs
 
-If your usecase requires you to have multiple logs seperate log files for INFO and ERROR logs for instance (*only the ConsoleTransport at this time so if you need to log to a file you'll need to roll your own transport class*) then you can add a variants property to your config, this will create a wrapper logger that will delegate to multiple loggers.
+If your usecase requires you to have multiple logs - separate log files for INFO and ERROR logs for instance then you can add a variants property to your config; this will create a wrapper logger that will delegate to multiple loggers.
+
+*(Only the ConsoleTransport supports variants at this time, so if you need to log to a file you'll need to roll your own transport class.)*
 
 ```js
 {
