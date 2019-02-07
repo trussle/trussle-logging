@@ -1,6 +1,6 @@
 {
   "extends": [
-    "config:base"
+    "@trussle"
   ],
   "reviewers": [
     "jonnyarnold"  
