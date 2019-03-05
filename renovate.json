@@ -2,7 +2,7 @@
   "extends": [
     "@trussle"
   ],
-  "reviewers": [
+  "assignees": [
     "jonnyarnold"  
   ]
 }
